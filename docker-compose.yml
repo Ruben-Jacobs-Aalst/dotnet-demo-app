@@ -1,6 +1,8 @@
 services:
   todoappdb:
-    image: mariadb:11
+    build:
+      context: ./TodoApp
+      dockerfile: Dockerfile.db
     container_name: todoappdb
     environment:
       MARIADB_ROOT_PASSWORD: sekrit
